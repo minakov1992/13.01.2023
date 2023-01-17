@@ -35,5 +35,7 @@ int number2 = Convert.ToInt32(Console.ReadLine());
 
 bool result = Square(number1, number2);
 
-if (result) Console.WriteLine("да");
-else Console.WriteLine("нет");
+// if (result) Console.WriteLine("да");
+// else Console.WriteLine("нет");
+
+Console.WriteLine(result ? "да" : "нет");
