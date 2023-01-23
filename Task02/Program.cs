@@ -5,14 +5,22 @@
 // a = 2 b = 10 -> max = 10
 // a = -9 b = -3 -> max = -3
 
+int max = 0;
+int min = 0;
+
 Console.WriteLine("Введите число A");
-double numberA = Convert.ToInt32(Console.ReadLine());
+int a = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число B");
-double numberB = Convert.ToInt32(Console.ReadLine());
-double max = numberA;
+int b = Convert.ToInt32(Console.ReadLine());
 
-if(numberA > max) max = numberA;
-if(numberB > max) max = numberB;
-
-Console.Write("max = ");
-Console.WriteLine(max);
+if(a > b)
+{
+    max = a;
+    min = b;
+}
+else
+{
+    max = b;
+    min = a;
+}
+Console.WriteLine("max = " + max + " и " + "min = " + min);

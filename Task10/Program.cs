@@ -9,8 +9,8 @@
 // Решение 1.
 // Console.WriteLine("Введите трёхзначное число: ");
 // int number = Convert.ToInt32(Console.ReadLine());
-// int secondDigit = number / 10 % 10;
-// Console.WriteLine($"из числа {number} получили {secondDigit}");
+// int result = number / 10 % 10;
+// Console.WriteLine($"из числа {number} получили  result}");
 
 
 // Решение 2.
@@ -19,8 +19,8 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 int SecondDigit(int num)
 {
-    int secondDigit = num / 10 % 10;
-    return secondDigit;
+    int result = num / 10 % 10;
+    return result;
 }
-int secondDigit = SecondDigit(number);
-Console.WriteLine($"из числа {number} получили {secondDigit}");
+int result = SecondDigit(number);
+Console.WriteLine($"из числа {number} получили  {result}");

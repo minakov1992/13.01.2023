@@ -27,7 +27,6 @@ Console.WriteLine("Введите два числа :");
 
 int numberFirst = Convert.ToInt32(Console.ReadLine());
 int numberSecond = Convert.ToInt32(Console.ReadLine());
-
 int remains = MultipleNum(numberFirst, numberSecond);
 
 if (remains == 0)
