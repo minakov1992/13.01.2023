@@ -31,4 +31,3 @@ string Quarter(string num)
         default: return "Неккоректный ввод!";
     }
 }
-
