@@ -6,15 +6,15 @@
 Console.Write("Введите натуральное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 if (number < 1) Console.WriteLine("Некорректный ввод");
-else Table(number);
+else Cube(number);
 
 
-void Table(int num)
+void Cube(int num)
 {
     int count = 1;
     while (count <= num)
     {
-        Console.WriteLine($"{count,5}   {count * count * count,5}");
+        Console.WriteLine($"{count} x {count} x {count} = {count * count * count}");
         count++;
     }
 }
