@@ -23,4 +23,8 @@ int SecondDigit(int num)
     return result;
 }
 int result = SecondDigit(number);
+
+if (number < 100 || number > 1000)
+Console.WriteLine("Это не трёхзначное число");
+else
 Console.WriteLine($"из числа {number} получили  {result}");
