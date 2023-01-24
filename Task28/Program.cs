@@ -16,7 +16,7 @@ int Factorial(int num)
 Console.Write("Введите число: ");
 int number =  Convert.ToInt32(Console.ReadLine());
 
-if(number > 0)
+if(number >= 0)
 {
     int result = Factorial(number);
     Console.WriteLine($"Произведение чисел от 1 до {number} равна {result}");

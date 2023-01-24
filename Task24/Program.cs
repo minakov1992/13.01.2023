@@ -13,7 +13,7 @@ if(number > 0)
     Console.WriteLine($"Сумма чисел от 1 до {number} равна {result}");
 }
 else
-    Console.WriteLine("Введено некорректное значение")
+    Console.WriteLine("Введено некорректное значение");
 
 int SumNumbers(int num)
 {
