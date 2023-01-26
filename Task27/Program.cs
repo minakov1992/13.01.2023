@@ -6,11 +6,11 @@
 int SumDigits(int num)
 {
     int sum = 0;
-    if (num < 0) num *= -1;
-    for (int i = 0; i != num; i++)
+    if (num <= 0) num *= -1;
+    for (int i = 0; i != num + 1; i++)
     {
         sum += num % 10;
-        num /= 10;
+        num = num / 10;
     }
     return sum;
 }
