@@ -28,47 +28,47 @@ void PrintArray(int[] array)
     Console.WriteLine("]");
 }
 
-int GetSumNegativeElements(int[]array)
-{
-    int sum = default;
-    for (int i = 0; i < array.Length; i++)
-    {
-        if(array[i] < 0) sum += array[i];
-    }
-    return sum;
-}
+// int GetSumNegativeElements(int[] array)
+// {
+//     int sum = default;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] < 0) sum += array[i];
+//     }
+//     return sum;
+// }
 
-int GetSumPositiveElements(int[]array)
-{
-    int sum = default;
-    for (int i = 0; i < array.Length; i++)
-    {
-        if(array[i] > 0) sum += array[i];
-    }
-    return sum;
-}
+// int GetSumPositiveElements(int[] array)
+// {
+//     int sum = default;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] > 0) sum += array[i];
+//     }
+//     return sum;
+// }
 
-int[] GetSumNegPosElements(int[]array)
+int[] GetSumNegPosElements(int[] array)
 {
     int sumNeg = 0;
     int sumPos = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if(array[i] > 0) sumPos += array[i];
-        if(array[i] < 0) sumNeg += array[i];
+        if (array[i] > 0) sumPos += array[i];
+        if (array[i] < 0) sumNeg += array[i];
     }
-    return new int[]{sumNeg, sumPos};
+    return new int[] { sumPos, sumNeg, };
 }
 
 
 
 int[] arr = CreateArrayRndInt(12, -9, 9);
 PrintArray(arr);
-int sumNegativeElements = GetSumNegativeElements(arr);
-int sumPositiveElements = GetSumPositiveElements(arr);
-Console.WriteLine($"Сумма положительных элементов равна {sumPositiveElements}");
-Console.WriteLine($"Сумма отрицательных элементов равна {sumNegativeElements}");
+// int sumNegativeElements = GetSumNegativeElements(arr);
+// int sumPositiveElements = GetSumPositiveElements(arr);
+// Console.WriteLine($"Сумма положительных элементов равна {sumPositiveElements}");
+// Console.WriteLine($"Сумма отрицательных элементов равна {sumNegativeElements}");
 
-int[] SumNegPos = GetSumNegPosElements(arr);
-Console.WriteLine($"Сумма положительных элементов равна {sumNegPos[1]}");
-Console.WriteLine($"Сумма отрицательных элементов равна {sumNegPos[0]}");
+int[] sumNegPos = GetSumNegPosElements(arr);
+Console.WriteLine($"Сумма положительных элементов равна {sumNegPos[0]}");
+Console.WriteLine($"Сумма отрицательных элементов равна {sumNegPos[1]}");

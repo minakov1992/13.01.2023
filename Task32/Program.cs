@@ -2,7 +2,7 @@
 // положительные элементы замените на соответствующие отрицательные, и наоборот.
 // [-4, -8, 8, 2] -> [4, 8, -8, -2]
 
-int[] GreatArrayRnd(int size, int min, int max)
+int[] CreateArrayRnd(int size, int min, int max)
 {
     int[] arr = new int[size];
     Random rnd = new Random();
@@ -30,7 +30,7 @@ int[] Reverse (int[] array)
     return array;
 }
 
-int[] arr = GreatArrayRnd(4, -10, 10);
+int[] arr = CreateArrayRnd(4, -10, 10);
 PrintArray(arr);
 int[] reverseArray = Reverse(arr);
 PrintArray(reverseArray);
