@@ -32,7 +32,7 @@ double[] MinMaxValue(double[] array)
         if (array[i] > maxValue) maxValue = array[i];
         if (array[i] < minValue) minValue = array[i];
     }
-    return new double[] { minValue, maxValue };
+    return new double[] { minValue, maxValue , maxValue - minValue};
 }
 
 double[] array = RandomArray(5, 0, 100);
@@ -41,4 +41,4 @@ PrintArray(array);
 double[] result = MinMaxValue(array);
 Console.WriteLine($"Минимальное значение в массиве: {result[0]}");
 Console.WriteLine($"Максимальное значение в массиве: {result[1]}");
-Console.WriteLine($"Разница максимального и минимального значений в массиве: {result[1]} - {result[0]} = {Math.Round((result[1] - result[0]), 1)}");
+Console.WriteLine($"Разница максимального и минимального значений в массиве: {result[1]} - {result[0]} = {Math.Round((result[2]), 1)}");
