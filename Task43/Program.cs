@@ -5,38 +5,6 @@
 
 Console.Clear();
 
-// double CrossPoints(double bc1, double kc1, double bc2, double kc2)
-// {
-//     double yc = 0;
-//     double xc = 0;
-//     double yc = kc2 * xc + bc2;
-//     {
-//         double xc = (bc2 - bc1) / (kc1 - kc2);
-//         return xc;
-//     }
-//     return yc;
-// }
-
-// Console.Write("введите значение b1: ");
-// double b1 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("введите число k1: ");
-// double k1 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("введите значение b2: ");
-// double b2 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("введите число k2: ");
-// double k2 = Convert.ToInt32(Console.ReadLine());
-
-// // double x = (-b2 + b1) / (-k1 + k2);
-// // double y = k2 * x + b2;
-
-// // Console.Write($"две прямые пересекутся в точке с координатами X: {x}, Y: {y}");
-
-// double cross = CrossPoints(b1, k1, b2, k2);
-
-
-
-
-
 double[,] value = new double[2, 2];
 double[] crossXY = new double[2];
 
