@@ -2,7 +2,7 @@
 // возможных координат точек в этой четверти (x и y).
 
 Console.Write("Введите номер плоскости: ");
-string number = Console.ReadLine();
+string ? number = Console.ReadLine();
 
 string quarter = Quarter(number);
 
