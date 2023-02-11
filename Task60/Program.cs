@@ -7,9 +7,9 @@
 
 Console.Clear();
 
-void GenerateArray3D(int[,,] array3D)
+void Generatematrix(int[,,] matrix)
 {
-    int[] temporary = new int[array3D.GetLength(0) * array3D.GetLength(1) * array3D.GetLength(2)];
+    int[] temporary = new int[matrix.GetLength(0) * matrix.GetLength(1) * matrix.GetLength(2)];
     int num;
     for (int i = 0; i < temporary.GetLength(0); i++)
     {
@@ -30,28 +30,28 @@ void GenerateArray3D(int[,,] array3D)
         }
     }
     int counter = 0;
-    for (int rows = 0; rows < array3D.GetLength(0); rows++)
+    for (int rows = 0; rows < matrix.GetLength(0); rows++)
     {
-        for (int columns = 0; columns < array3D.GetLength(1); columns++)
+        for (int columns = 0; columns < matrix.GetLength(1); columns++)
         {
-            for (int depth = 0; depth < array3D.GetLength(2); depth++)
+            for (int depth = 0; depth < matrix.GetLength(2); depth++)
             {
-                array3D[rows, columns, depth] = temporary[counter];
+                matrix[rows, columns, depth] = temporary[counter];
                 counter++;
             }
         }
     }
 }
 
-void PrintArray3D(int[,,] array3D)
+void Printmatrix(int[,,] matrix)
 {
-    for (int i = 0; i < array3D.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j < array3D.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            for (int k = 0; k < array3D.GetLength(2); k++)
+            for (int k = 0; k < matrix.GetLength(2); k++)
             {
-                Console.Write($"  {array3D[i, j, k]}({i},{j},{k}) ");
+                Console.Write($"  {matrix[i, j, k]}({i},{j},{k}) ");
             }
         }
         Console.WriteLine();
@@ -70,8 +70,8 @@ if (rows > 0 && columns > 0 && depth > 0)
 {
     Console.WriteLine();
     int[,,] array3D = new int[rows, columns, depth];
-    GenerateArray3D(array3D);
-    PrintArray3D(array3D);
+    Generatematrix(array3D);
+    Printmatrix(array3D);
     Console.WriteLine();
 }
 else Console.WriteLine("Вводимые значения должны быть положительными.");

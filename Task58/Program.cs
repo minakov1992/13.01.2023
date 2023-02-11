@@ -65,17 +65,17 @@ int z = Convert.ToInt32(Console.ReadLine());
 
 if (x > 0 && y > 0 && z > 0)
 {
-    int[,] matrixA = new int[x, y];
-    GenerateMatrix(matrixA);
+    int[,] matrA = new int[x, y];
+    GenerateMatrix(matrA);
     Console.WriteLine("Первая матрица:");
-    PrintMatrix(matrixA);
-    int[,] matrixB = new int[y, z];
-    GenerateMatrix(matrixB);
+    PrintMatrix(matrA);
+    int[,] matrB = new int[y, z];
+    GenerateMatrix(matrB);
     Console.WriteLine("Вторая матрица:");
-    PrintMatrix(matrixB);
-    int[,] matrixC = new int[x, z];
-    MultiplyMatrix(matrixA, matrixB, matrixC);
+    PrintMatrix(matrB);
+    int[,] matrC = new int[x, z];
+    MultiplyMatrix(matrA, matrB, matrC);
     Console.WriteLine("Произведение матриц:");
-    PrintMatrix(matrixC);
+    PrintMatrix(matrC);
 }
 else Console.WriteLine("Вводимые значения должны быть положительными.");
