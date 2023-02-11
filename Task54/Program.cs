@@ -61,9 +61,18 @@ void OrderMatrix(int[,] matrix)
     }
 }
 
-int[,] array2D = GenerateMatrix(4, 4, 0, 10);
-Console.WriteLine("    Случайный двумерный массив:");
-PrintMatrix(array2D);
-OrderMatrix(array2D);
-Console.WriteLine("    Упорядоченный двумерный массив:");
-PrintMatrix(array2D);
+Console.Write("Ввведите число строк: ");
+int x = Convert.ToInt32(Console.ReadLine());
+Console.Write("Ввведите число столбцов: ");
+int y = Convert.ToInt32(Console.ReadLine());
+
+if (x > 0 && y > 0)
+{
+    int[,] array2D = GenerateMatrix(x, y, 0, 9);
+    Console.WriteLine("Случайный двумерный массив:");
+    PrintMatrix(array2D);
+    OrderMatrix(array2D);
+    Console.WriteLine("Упорядоченный двумерный массив:");
+    PrintMatrix(array2D);
+}
+else Console.WriteLine("Число не может быть отрицательным.");

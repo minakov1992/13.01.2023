@@ -13,14 +13,10 @@ void FillMatrix(int[,] matrix)
     while (temp <= matrix.GetLength(0) * matrix.GetLength(1))
     {
         matrix[i, j] = temp;
-        if (i <= j + 1 && i + j < matrix.GetLength(1) - 1)
-            j++;
-        else if (i < j && i + j >= matrix.GetLength(0) - 1)
-            i++;
-        else if (i >= j && i + j > matrix.GetLength(1) - 1)
-            j--;
-        else
-            i--;
+        if (i <= j + 1 && i + j < matrix.GetLength(1) - 1) j++;
+        else if (i < j && i + j >= matrix.GetLength(0) - 1) i++;
+        else if (i >= j && i + j > matrix.GetLength(1) - 1) j--;
+        else i--;
         temp++;
     }
 }
@@ -34,7 +30,6 @@ void PrintMatrix(int[,] matrix)
         {
             if (matrix[i, j] / 10 <= 0)
                 Console.Write($" {matrix[i, j]}  ");
-
             else Console.Write($"{matrix[i, j]}  ");
         }
         Console.WriteLine();
@@ -44,6 +39,11 @@ void PrintMatrix(int[,] matrix)
 
 Console.Write("Введите размер квадратной матрицы: ");
 int size = Convert.ToInt32(Console.ReadLine());
-int[,] matrix = new int[size, size];
-FillMatrix(matrix);
-PrintMatrix(matrix);
+
+if (size > 0)
+{
+    int[,] matrix = new int[size, size];
+    FillMatrix(matrix);
+    PrintMatrix(matrix);
+}
+else Console.WriteLine("Вводимый размер матрицы должен быть положительнымю");

@@ -65,9 +65,13 @@ Console.Write("Введите Y (ширина массива): ");
 int columns = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите Z (глубина массива): ");
 int depth = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine();
 
-int[,,] array3D = new int[rows, columns, depth];
-GenerateArray3D(array3D);
-PrintArray3D(array3D);
-Console.WriteLine();
+if (rows > 0 && columns > 0 && depth > 0)
+{
+    Console.WriteLine();
+    int[,,] array3D = new int[rows, columns, depth];
+    GenerateArray3D(array3D);
+    PrintArray3D(array3D);
+    Console.WriteLine();
+}
+else Console.WriteLine("Вводимые значения должны быть положительными.");

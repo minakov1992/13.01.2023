@@ -25,7 +25,6 @@ int[,] GenerateMatrix(int rows, int columns, int min, int max)
 
 void PrintMatrix(int[,] matrix)
 {
-
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         Console.Write("|");
@@ -35,7 +34,6 @@ void PrintMatrix(int[,] matrix)
             else Console.Write($"{matrix[i, j],5}");
         }
         Console.WriteLine("   |");
-
     }
     Console.WriteLine();
 }
@@ -50,7 +48,7 @@ void PrintArray(int[] array)
     }
 }
 
-int[] SumRows(int[,] matrix, int size)
+int[] SumRow(int[,] matrix, int size)
 {
     int[] arr = new int[size];
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -65,13 +63,11 @@ int[] SumRows(int[,] matrix, int size)
     return arr;
 }
 
-int MinElement(int[] arr)
+int MinSumRow(int[] arr)
 {
     int min = arr[0];
     int index = 0;
-
     for (int i = 0; i < arr.Length; i++)
-
         if (min > arr[i])
         {
             min = arr[i];
@@ -83,13 +79,18 @@ int MinElement(int[] arr)
 
 Console.Write("Введите размер прямоугольной матрицы: ");
 int size = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine();
-int[,] array2D = GenerateMatrix(size, size, 0, 10);
-Console.WriteLine("Случайная прямоугольная матрица:");
-PrintMatrix(array2D);
-int[] array = SumRows(array2D, size);
-Console.WriteLine("Сумма строк в массиве:");
-PrintArray(array);
-Console.WriteLine();
-int result = MinElement(array);
-Console.WriteLine("Минимальная сумма строки в массиве: " + result);
+
+if (size > 0)
+{
+    Console.WriteLine();
+    int[,] array2D = GenerateMatrix(size, size, 0, 10);
+    Console.WriteLine("Случайная прямоугольная матрица:");
+    PrintMatrix(array2D);
+    int[] array = SumRow(array2D, size);
+    Console.WriteLine("Сумма строк в массиве:");
+    PrintArray(array);
+    Console.WriteLine();
+    int result = MinSumRow(array);
+    Console.WriteLine("Номер строки с наименьшей суммой элементов в массиве: " + result);
+}
+else Console.WriteLine("Размер массива не может быть отрицательным");
