@@ -46,4 +46,4 @@ if (size > 0)
     FillMatrix(matrix);
     PrintMatrix(matrix);
 }
-else Console.WriteLine("Вводимый размер матрицы должен быть положительнымю");
+else Console.WriteLine("Вводимый размер матрицы должен быть положительным.");
